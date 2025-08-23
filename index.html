@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Test Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎉 GitHub Integration Test</h1>
+            <p>This page was created to test Cursor's GitHub integration</p>
+        </header>
+
+        <main>
+            <section class="features">
+                <h2>Features Tested</h2>
+                <ul>
+                    <li>✅ Git repository initialization</li>
+                    <li>✅ Remote origin setup</li>
+                    <li>✅ File creation and commits</li>
+                    <li>✅ Branch management</li>
+                    <li>✅ Pull request creation</li>
+                </ul>
+            </section>
+
+            <section class="demo">
+                <h2>Try It Out</h2>
+                <button onclick="showMessage()">Click Me!</button>
+                <p id="message" class="hidden">Hello from your GitHub repository! 🚀</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>Created with Cursor AI Assistant</p>
+        </footer>
+    </div>
+
+    <script>
+        function showMessage() {
+            const message = document.getElementById('message');
+            message.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
