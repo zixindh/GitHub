@@ -15,6 +15,7 @@ This is a test repository to demonstrate GitHub integration with Cursor.
 
 ## Test Files
 - `hello.py` - A simple Python script
+- `calculator.py` - Interactive calculator application
 - `index.html` - Basic HTML page
 - `styles.css` - CSS styling
 
