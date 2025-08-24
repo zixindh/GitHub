@@ -1,0 +1,19 @@
+# GitHub Pages Configuration
+title: GitHub Portfolio
+description: Interactive portfolio website with calculator and code demos
+theme: minima
+
+# GitHub Pages settings
+github:
+  repository_url: "https://github.com/your-username/your-repo"
+
+# Exclude unnecessary files from build
+exclude:
+  - README.md
+  - .github/
+  - "*.py"
+
+# Include static files
+include:
+  - styles.css
+  - index.html
