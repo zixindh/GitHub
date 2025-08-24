@@ -3,37 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Test Page</title>
+    <title>GitHub Portfolio - Interactive Demo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🎉 GitHub Integration Test</h1>
-            <p>This page was created to test Cursor's GitHub integration</p>
+            <h1>🚀 GitHub Portfolio</h1>
+            <p>Interactive demonstrations and code examples</p>
         </header>
 
-        <main>
-            <section class="features">
-                <h2>Features Tested</h2>
-                <ul>
-                    <li>✅ Git repository initialization</li>
-                    <li>✅ Remote origin setup</li>
-                    <li>✅ File creation and commits</li>
-                    <li>✅ Branch management</li>
-                    <li>✅ Pull request creation</li>
-                </ul>
-            </section>
+        <nav class="nav-tabs">
+            <button class="tab-button active" onclick="showTab('home')">Home</button>
+            <button class="tab-button" onclick="showTab('calculator')">Calculator</button>
+            <button class="tab-button" onclick="showTab('about')">About</button>
+        </nav>
 
-            <section class="demo">
-                <h2>Try It Out</h2>
-                <button onclick="showMessage()">Click Me!</button>
-                <p id="message" class="hidden">Hello from your GitHub repository! 🚀</p>
-            </section>
+        <main>
+            <div id="home" class="tab-content active">
+                <section class="hero">
+                    <h2>Welcome to My GitHub Pages Site!</h2>
+                    <p>This website showcases interactive demos and code examples. Built with HTML, CSS, and JavaScript, deployed automatically through GitHub Actions.</p>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h3>🔧 Interactive Calculator</h3>
+                            <p>Try the JavaScript calculator - performs all basic operations with a clean interface.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>📁 Project Files</h3>
+                            <p>View the source code for Python scripts and web files in the repository.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>⚡ GitHub Actions</h3>
+                            <p>Automatic deployment whenever you push changes to the main branch.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="calculator" class="tab-content">
+                <section class="calculator-section">
+                    <h2>🧮 Interactive Calculator</h2>
+                    <p>A web-based calculator built with JavaScript. Try all the basic operations!</p>
+
+                    <div class="calculator">
+                        <div class="calculator-display">
+                            <input type="text" id="display" readonly>
+                        </div>
+                        <div class="calculator-buttons">
+                            <button onclick="clearDisplay()" class="clear">C</button>
+                            <button onclick="deleteLast()" class="delete">⌫</button>
+                            <button onclick="appendToDisplay('.')">.</button>
+                            <button onclick="chooseOperation('/')" class="operator">/</button>
+
+                            <button onclick="appendToDisplay('7')">7</button>
+                            <button onclick="appendToDisplay('8')">8</button>
+                            <button onclick="appendToDisplay('9')">9</button>
+                            <button onclick="chooseOperation('*')" class="operator">*</button>
+
+                            <button onclick="appendToDisplay('4')">4</button>
+                            <button onclick="appendToDisplay('5')">5</button>
+                            <button onclick="appendToDisplay('6')">6</button>
+                            <button onclick="chooseOperation('-')" class="operator">-</button>
+
+                            <button onclick="appendToDisplay('1')">1</button>
+                            <button onclick="appendToDisplay('2')">2</button>
+                            <button onclick="appendToDisplay('3')">3</button>
+                            <button onclick="chooseOperation('+')" class="operator">+</button>
+
+                            <button onclick="appendToDisplay('0')" class="zero">0</button>
+                            <button onclick="calculate()" class="equals">=</button>
+                        </div>
+                    </div>
+
+                    <div class="code-preview">
+                        <h3>Python Version Available</h3>
+                        <p>The same calculator logic is also available as a Python script in this repository:</p>
+                        <pre><code>def add(a, b):
+    return a + b
+
+def multiply(a, b):
+    return a * b
+# ... more functions</code></pre>
+                        <a href="https://github.com/your-username/your-repo/blob/main/calculator.py" target="_blank" class="github-link">View Python Calculator →</a>
+                    </div>
+                </section>
+            </div>
+
+            <div id="about" class="tab-content">
+                <section class="about-section">
+                    <h2>About This Project</h2>
+                    <p>This GitHub Pages website demonstrates modern web development practices and automated deployment.</p>
+
+                    <div class="about-grid">
+                        <div class="about-item">
+                            <h3>🛠️ Built With</h3>
+                            <ul>
+                                <li>HTML5 & CSS3</li>
+                                <li>Vanilla JavaScript</li>
+                                <li>GitHub Pages</li>
+                                <li>GitHub Actions</li>
+                            </ul>
+                        </div>
+                        <div class="about-item">
+                            <h3>📁 Repository Contents</h3>
+                            <ul>
+                                <li><code>index.html</code> - Main website</li>
+                                <li><code>styles.css</code> - Styling</li>
+                                <li><code>calculator.py</code> - Python calculator</li>
+                                <li><code>hello.py</code> - Simple greeting script</li>
+                                <li><code>.github/workflows/</code> - CI/CD pipeline</li>
+                            </ul>
+                        </div>
+                        <div class="about-item">
+                            <h3>🚀 Features</h3>
+                            <ul>
+                                <li>Responsive design</li>
+                                <li>Interactive calculator</li>
+                                <li>Tab-based navigation</li>
+                                <li>Automatic deployment</li>
+                                <li>Clean, modern UI</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="github-links">
+                        <a href="https://github.com/your-username/your-repo" target="_blank" class="github-link">View Repository →</a>
+                        <a href="https://github.com/your-username/your-repo/blob/main/README.md" target="_blank" class="github-link">Read Documentation →</a>
+                    </div>
+                </section>
+            </div>
         </main>
 
         <footer>
-            <p>Created with Cursor AI Assistant</p>
+            <p>🚀 Built with Cursor AI Assistant | Hosted on GitHub Pages</p>
         </footer>
     </div>
 
@@ -41,6 +144,85 @@
         function showMessage() {
             const message = document.getElementById('message');
             message.classList.toggle('hidden');
+        }
+
+        // Tab navigation
+        function showTab(tabName) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // Calculator functions
+        let currentInput = '';
+        let previousInput = '';
+        let operation = null;
+
+        function appendToDisplay(value) {
+            currentInput += value;
+            updateDisplay();
+        }
+
+        function chooseOperation(op) {
+            if (currentInput === '') return;
+            if (previousInput !== '') calculate();
+            operation = op;
+            previousInput = currentInput;
+            currentInput = '';
+        }
+
+        function calculate() {
+            let result;
+            const prev = parseFloat(previousInput);
+            const current = parseFloat(currentInput);
+
+            if (isNaN(prev) || isNaN(current)) return;
+
+            switch (operation) {
+                case '+':
+                    result = prev + current;
+                    break;
+                case '-':
+                    result = prev - current;
+                    break;
+                case '*':
+                    result = prev * current;
+                    break;
+                case '/':
+                    result = prev / current;
+                    break;
+                default:
+                    return;
+            }
+
+            currentInput = result.toString();
+            operation = null;
+            previousInput = '';
+            updateDisplay();
+        }
+
+        function clearDisplay() {
+            currentInput = '';
+            previousInput = '';
+            operation = null;
+            updateDisplay();
+        }
+
+        function deleteLast() {
+            currentInput = currentInput.slice(0, -1);
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            document.getElementById('display').value = currentInput;
         }
     </script>
 </body>
